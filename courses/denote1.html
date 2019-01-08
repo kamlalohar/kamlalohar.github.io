@@ -1,0 +1,37 @@
+<html>
+
+<head>
+	<!-- creation date: 2/18/2001 -->
+	<!-- modified date: 1/20/2002 -->
+	<!-- designed by: Hidayatullah Ahsan -->
+	<link rel="stylesheet" href="../stylesheet.css">
+</head>
+
+<body>
+<h2 align=left><FONT color=#000000>1. Plotting the Direction Field of a
+Differential Equation using Maple <a href="javascript:window.print();"><img border="0" src="../images/printicon.jpg" width="20" height="19"></a></FONT> </h2>
+<P align=left><FONT color=#000000>(Using the following command and hitting 
+enter:)</FONT> </P>
+<P align=left><TT>&gt; </TT><B><FONT color=#ff0000>with(DEtools):</FONT></B> 
+</P>
+<P align=left><TT>&gt; </TT><B><FONT 
+color=#ff0000>dfieldplot(diff(v(t),t)=9.8-v(t)/5, v(t), t=0..10,v(t)=40..60, 
+title=`Falling Body`);</FONT></B> </P>
+<P align=center><IMG height=249 alt="[Maple Plot]" src="images/DE011.gif" 
+width=454> </P>
+<P align=left><FONT color=#000000>When dealing with Maple, or any other software 
+for that matter, remember that it is a machine you are dealing with and it will 
+only do what it is programmed to do. So try to put in the commands in the 
+precise fashion it requires. Using Maple gives you the added advantage of taking 
+one of its examples and tweaking it to suit your purposes. Here is the example 
+about the field mice that we talked in the class about. If you already have 
+with(DEtools): on your screen then you do not have to repeat it. So punch in the 
+differential equation related to the field mice (page 6 of your book).</FONT> 
+</P>
+<P align=left><TT>&gt; </TT><B><FONT 
+color=#ff0000>dfieldplot(diff(p(t),t)=0.5*p(t)-450,p(t),t=0..10,p(t)=800..1000);</FONT></B> 
+</P>
+<P align=center><IMG height=260 alt="[Maple Plot]" src="images/DE012.gif" 
+width=447> </P>
+<P align=left><TT>&gt; </TT></P>
+<P align=left></P></BODY></HTML>

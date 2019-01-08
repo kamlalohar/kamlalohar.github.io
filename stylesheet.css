@@ -1,0 +1,63 @@
+body,p,ul{
+	font-family: Verdana, Arial, Helvetica;
+	font-weight: normal;
+	font_style: normal;
+	font-size: 10pt;
+}
+a{
+	font-family: Verdana, Arial, Helvetica;
+	font-weight: normal;
+	font_style: normal;
+	color: #0000FF;
+	text-decoration: none;
+}
+a.visited{
+	font-family: Verdana, Arial, Helvetica;
+	font-weight: normal;
+	font_style: normal;
+	color: #0000FF;
+	text-decoration: none;
+}
+h1{
+	font-family: Garamond, 'Times New Roman', Times;
+	font-weight: normal; 
+	font-style: normal;
+	font-size: 24pt;
+	color: #008000;
+}
+h2{
+	font-family: Garamond, 'Times New Roman', Times;
+	font-weight: normal; 
+	font-style: normal;
+	font-size: 18pt;
+	color: #000080
+}
+h3{
+	font-family: Garamond, 'Times New Roman', Times;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 14pt;
+	color: #800000
+}
+TABLE,td{
+	font-family: Verdana, Arial, Helvetica;
+	font-weight: normal;
+	font_style: normal;
+	font-size: 10pt;
+}
+CAPTION 
+{
+	font-size: 14pt;
+	font-family: Garamond, "Times New Roman", Times;
+	font-style: normal; 
+}
+TH
+{
+	font-family: Verdana, Arial, Helvetica;
+	font-style: normal; 
+}
+MARQUEE
+{
+	font-size: 8pt;
+	font-family:Verdana, Arial, Helvetica;
+}

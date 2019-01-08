@@ -1,0 +1,189 @@
+<html>
+
+<head>
+	<!-- creation date: 2/18/2001 -->
+	<!-- modified date: 1/20/2002 -->
+	<!-- designed by: Hidayatullah Ahsan -->
+	<link rel="stylesheet" href="../stylesheet.css">
+</head>
+
+<body>
+
+<h2 align=left>
+<font color=#000000>3. Plotting Graphs of Solutions, with Specified Initial Conditions and
+Integration <a href="javascript:window.print();"><img border="0" src="../images/printicon.jpg" width="20" height="19"></a></font>
+</h2>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>with(DEtools):</font></b>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>DEplot(diff(v(t),t)=9.8-v(t)/5,v(t),t=0..10,[[v(0)=40],[v(0)=55],[v(0)=30],[v(0)=65],[v(0)=49]],arrows=none);</font></b>
+</p>
+<p align=center>
+<img src="images/DEnote31.gif" width=312 height=184 alt="[Maple Plot]">
+</p>
+<p align=left>
+<font color=#000000>The above graph is to do with the now familiar falling body problem. It plots solutions corresponding to various initial values. You may want to compare it with the picture on page 13 of your book. I suggest that you 'tweak' the above command  to  find  the graph of a single solution. The following is a plot in relation with problem 1 part (a) on page 14.</font>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>DEplot(diff(y(t),t)=5-y(t),y(t),t=0..5,[[y(0)=0],[y(0)=10],[y(0)=7],[y(0)=5],[y(0)=4],[y(0)=-1]], arrows=none);</font></b>
+</p>
+<p align=center>
+<img src="images/DEnote32.gif" width=388 height=288 alt="[Maple Plot]">
+</p>
+<p align=left>
+</p>
+<p align=left>
+</p>
+<p align=left>
+<font color=#000000>Just to give you the idea that not all differential equations have solutions involving exponentials.</font>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>DEplot(diff(y(t),t)=5-t,y(t),t=0..12,[[y(0)=0],[y(0)=10],[y(0)=7],[y(0)=4],[y(0)=-1]], arrows=none);</font></b>
+</p>
+<p align=center>
+<img src="images/DEnote33.gif" width=388 height=288 alt="[Maple Plot]">
+</p>
+<p align=left>
+<font color=#000000>If you have not done that yet, note now that the above example is a matter of simple integration. However if you are after simple integration such as </font>
+<img src="images/DEnote34.gif" width=146 height=76 alt="int(5-2*t+t^2-1/t,t)" align=middle>
+<font color=#000000> you can directly do that as follows:</font>
+</p>
+<p align=center>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>int((5-2*t+t^2-1/t),t);</font></b>
+</p>
+<p align=center>
+<img src="images/DEnote35.gif" width=153 height=45 alt="5*t-t^2+1/3*t^3-ln(t)">
+</p>
+<p align=left>
+<font color=#000000>Notice that int(5-2*t+t^2-1/t,t); gives you the integral of the function </font>
+<i><font color=#000000>f(t)=5-2t+t^2-1/t, </font></i>
+<font color=#000000>with respect to</font>
+<i><font color=#000000> t </font></i>
+<font color=#000000>without the constant of integration. Note also that to indicate multiplication you write </font>
+<i><font color=#000000>a*b</font></i>
+<font color=#000000> and not </font>
+<i><font color=#000000>ab</font></i>
+<font color=#000000> and for powers you do the same as you do with the calculators. Also for </font>
+<i><font color=#000000>a</font></i>
+<font color=#000000> divided by </font>
+<i><font color=#000000>b</font></i>
+<font color=#000000> you write </font>
+<i><font color=#000000>a/b</font></i>
+<font color=#000000> as you do with the calculators. Now let us try something harder.</font>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>int(sqrt(9-x^2),x);</font></b>
+</p>
+<p align=center>
+<img src="images/DEnote36.gif" width=200 height=45 alt="1/2*x*sqrt(9-x^2)+9/2*arcsin(1/3*x)">
+</p>
+<p align=left>
+<font color=#000000>Does that remind you of something? Note also that the software takes 'sqrt' for the square root sign. This much about the indefinite integrals. (You can explore the glossary part of the help to find other ways of finding indefinite integrals. At end of the help session on a command, there are given some examples, pick an example that is closest to what you want to do copy it and tweak is so that it become the command that you want.) For the definite integral of say 5-2*t+t^2-1/t,with respect to t from t=1 to t=5 you write:</font>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>int(5-2*t+t^2-1/t,t=1..5);</font></b>
+</p>
+<p align=center>
+<img src="images/DEnote37.gif" width=89 height=45 alt="112/3-ln(5)">
+</p>
+<p align=left>
+<font color=#000000>Now you want a number in decimal notation. To arrange that you may use the 'evalf' function:</font>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>evalf(int(5-2*t+t^2-1/t,t=1..5));</font></b>
+</p>
+<p align=center>
+<img src="images/DEnote38.gif" width=100 height=20 alt="35.72389542">
+</p>
+<p align=left>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>int(cos(x),x=0..Pi);</font></b>
+</p>
+<p align=center>
+<img src="images/DEnote39.gif" width=24 height=20 alt="0">
+</p>
+<p align=left>
+<font color=#000000>Note that for most of the functions such as the trig functions, you are supposed to write say sin(x) for sin x.</font>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>int(abs(cos(3*x)),x=0..Pi/2);</font></b>
+</p>
+<p align=center>
+<img src="images/DEnote310.gif" width=24 height=20 alt="1">
+</p>
+<p align=left>
+<font color=#000000>Of course 'abs' indicates the absolute value function. Note the brackets. Now let us suppose that you want to evaluate </font>
+<img src="images/DEnote311.gif" width=85 height=86 alt="int(x*exp(x),x = 0 .. 2)" align=middle>
+<font color=#000000>. Noting that </font>
+<img src="images/DEnote312.gif" width=17 height=21 alt="[Maple OLE 2.0 Object]">
+<font color=#000000> is accepted as exp(x) we write the command as:</font>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>int(x*exp(x),x=0..2);</font></b>
+</p>
+<p align=center>
+<img src="images/DEnote313.gif" width=58 height=29 alt="exp(2)+1">
+</p>
+<p align=left>
+<font color=#000000>Now if you want the value in decimal notation you know exactly what to do. Next, it is a cruel world and you know that not all continuous functions have antiderivatives. So let us find out what Maple would do with such a function. Let us try to find the integral </font>
+<img src="images/DEnote314.gif" width=96 height=100 alt="int(exp(x^3),x = 0 .. 1)" align=middle>
+<font color=#000000>  the Maple command for it is:</font>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>int(exp(x^3),x=0..1);</font></b>
+</p>
+<p align=center>
+<img src="images/DEnote315.gif" width=96 height=86 alt="int(exp(x^3),x = 0 .. 1)">
+</p>
+<p align=left>
+<font color=#000000>It spits out the same integral we gave it in its own 'tongue'! This means that Maple could not do it; because there is no known formula for the antiderivative. But thanks to various numerical integration techniques we can approximate value of this integral by using 'evalf'.</font>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>evalf(int(exp(x^3),x=0..1));</font></b>
+</p>
+<p align=center>
+<img src="images/DEnote316.gif" width=100 height=20 alt="1.341904418">
+</p>
+<p align=left>
+<font color=#000000>Sometimes Maple does come up with an 'answer' but say we dont know how to handle it or we do not care about it. For example let us find</font>
+<img src="images/DEnote317.gif" width=116 height=90 alt="int(sqrt(1+x^4),x = 0 .. 1)" align=middle>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>int(sqrt(1+x^4),x = 0 .. 1);</font></b>
+</p>
+<p align=center>
+<img src="images/DEnote318.gif" width=181 height=45 alt="1/3*sqrt(2)+1/3*EllipticK(1/2*sqrt(2))">
+</p>
+<p align=left>
+<font color=#000000>This what I meant, we went asking integrals we got back something that we would take a long time learning about. Bad deal, let us try evalf</font>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>evalf(int(sqrt(1+x^4),x = 0 .. 1));</font></b>
+</p>
+<p align=center>
+<img src="images/DEnote319.gif" width=100 height=20 alt="1.089429413">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+</p>
+</body>
+</html>

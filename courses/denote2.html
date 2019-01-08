@@ -1,0 +1,90 @@
+<html>
+
+<head>
+	<!-- creation date: 2/18/2001 -->
+	<!-- modified date: 1/20/2002 -->
+	<!-- designed by: Hidayatullah Ahsan -->
+	<link rel="stylesheet" href="../stylesheet.css">
+</head>
+
+<body>
+
+<h2 align=left>
+<font color=#000000>2. Using Maple to Solve Differential Equations and Intial Value
+Problems <a href="javascript:window.print();"><img border="0" src="../images/printicon.jpg" width="20" height="19"></a></font>
+</h2>
+<p align=left>
+<font color=#000000>The aim of these note is to get you acquainted with Maple and what it can do for you along with some of the commands. For this I would redo the examples that we have done in class with the comment that the ability to solve problems by hand is important, but if you are pressed for time and you have Maple available you can do it much faster. Let us take up Example 2 on page 12 of your book. If you want to simply solve the differential equation the command for it is dsolve</font>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>dsolve(diff(v(t),t)=9.8-v(t)/5);</font></b>
+<font color=#000000>  (Once you hit </font>
+<i><font color=#000000>enter</font></i>
+<font color=#000000> you get the general solution below.)</font>
+</p>
+<p align=center>
+<img src="images/DEnote21.gif" width=178 height=58 alt="v(t) = 49+exp(-1/5*t)*_C1">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+</p>
+<p align=left>
+<font color=#000000>As you might have guessed the expression diff(v(t),t) stands for dv/dt. Now you want to solve the initial value problem mentioned there. For that you proceed as follows. Write down the ode as:</font>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>ode1:=diff(v(t),t)=9.8-v(t)/5;</font></b>
+</p>
+<p align=center>
+<img src="images/DEnote22.gif" width=202 height=45 alt="ode1 := diff(v(t),t) = 9.8-1/5*v(t)">
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>ans4[1]:dsolve({ode1,v(0)=0},v(t));</font></b>
+</p>
+<p align=center>
+<img src="images/DEnote23.gif" width=167 height=58 alt="v(t) = 49-49*exp(-1/5*t)">
+</p>
+<p align=left>
+<font color=#000000>That is what you expected. Now suppose you want to play around with the initial conditions a little bit. Change the initial conditions. Copy and paste the expression ans4[1]:dsolve({ode1,v(0)=0},v(t)); and make the necessary changes, for example you want v(0)=20, so make it. </font>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>ans4[2]:dsolve({ode1,v(0)=20},v(t));</font></b>
+</p>
+<p align=center>
+<img src="images/DEnote24.gif" width=167 height=58 alt="v(t) = 49-29*exp(-1/5*t)">
+</p>
+<p align=left>
+<font color=#000000>Let us complete the example as we have seen. The next initial value problem in that example can be expressed as follows:</font>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>ode2 := diff(x(t),t)=49*(1-exp(-t/5));</font></b>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>ans4[1] := dsolve( {ode2, x(0)=0}, x(t));</font></b>
+</p>
+<p align=center>
+<img src="images/DEnote25.gif" width=235 height=70 alt="ode2 := diff(x(t),t) = 49-49*exp(-1/5*t)">
+</p>
+<p align=center>
+<img src="images/DEnote26.gif" width=283 height=65 alt="ans4[1] := x(t) = 245*exp(-1/5*t)+49*t-245">
+</p>
+<p align=left>
+<font color=#000000>Now if you want to play around with initial conditions you can consider a new initial condition say x(0)=50.</font>
+</p>
+<p align=left>
+<tt>&gt; </tt>
+<b><font color=#FF0000>ans4[2] := dsolve( {ode2, x(0)=50}, x(t));</font></b>
+</p>
+<p align=center>
+<img src="images/DEnote27.gif" width=283 height=65 alt="ans4[2] := x(t) = 245*exp(-1/5*t)+49*t-195">
+</p>
+<p align=left>
+<font color=#000000>Note that if you were dealing with only one ode you need only write: ode:=diff (etc.etc.). </font>
+</p>
+</body>
+</html>
