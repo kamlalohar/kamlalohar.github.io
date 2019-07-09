@@ -1,0 +1,84 @@
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=4.10.0.2363}
+%TCIDATA{Created=Thursday, April 22, 2010 21:12:40}
+%TCIDATA{LastRevised=Monday, April 26, 2010 01:32:15}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%TCIDATA{Language=American English}
+%TCIDATA{CSTFile=40 LaTeX article.cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+\begin{center}
+Corrigendum for "Characterizing domains of finite $\ast $-character"
+
+Tiberiu Dumitrescu and Muhammad Zafrullah
+
+\bigskip
+\end{center}
+
+There is some confusion in lines 8-15 of the proof of Theorem 1. In the
+following we offer a fix to clear the confusion and give a rationale for the
+fix.
+
+The fix: Read the proof from the sentence that starts from line 8 as follows:
+
+Let $S$ be the family of sets of mutually $\ast $-comaximal homogeneous
+members of $\Gamma $ containing $I$. Then $S$ is nonempty by $(\sharp \sharp
+).$ Obviously $S$ is partially ordered under inclusion. Let $%
+A_{n_{1}}\subset A_{n_{2}}\subset ...\subset A_{n_{r}}\subset ...$ be an
+ascending chain of sets in $S$. Consider $T=\cup A_{n_{r}}.$ We claim that
+the members of $T$ are mutually $\ast $-comaximal. For take $x,y\in T,$ then 
+$x,y\in A_{n_{i}},$ for some $i,$ and hence are $\ast $-comaximal. Having
+established this we note that by $(\sharp ),$ $T$ must be finite and hence
+must be equal to one of the $A_{n_{j}}.$ Thus by Zorn's Lemma, $S$ must have
+a maximal element $U=\{V_{1},V_{2},...,V_{n}\}.$ Disregard the next two
+sentences and read on from: Next let $M_{i}$ be the maximal $\ast $-ideal....
+
+Rationale for the Fix: Using sets of mutually $\ast $-comaximal elements
+would entail some unwanted maximal elements as the following example shows:
+Let $x=2^{2}5^{2}$ in $Z$ the ring of integers. Then $\mathcal{S}%
+=\{\{(2^{2}5^{2})\},\{(25^{2})\},\{(2^{2}5)\}\{(2^{2})\},$ $%
+\{(5^{2})\},\{(2^{2}),(5^{2})\},$ $\{(2)\},\{(5)\},$ $\{(2),(5^{2})\},%
+\{(2^{2}),(5)\},$ $\{(2),(5)\}\}.$ In this case, while $\mathcal{S}$
+includes legitimate maximal elements: $\{(2^{2}),(5^{2})\},$ $%
+\{(2),(5^{2})\},$ $\{(2^{2}),(5)\},\{(2),(5)\}$ it also includes $%
+\{(2^{2}5^{2})\},\{(25^{2})\},\{(2^{2}5)\}$ which fit the definition of
+maximal elements. The reason why the fix should work is that given any set $%
+T=\{A_{1},A_{2},...,A_{m}\}$ of mutually $\ast $-comaximal $\ast $-finite
+ideals, by $(\sharp \sharp )$ there is a set of mutually $\ast $-comaximal
+homogeneous $\ast $-finite ideals $\{H_{1},H_{2},...,H_{n}\}$ in $\Gamma ,$
+where $n\geq m$ such that each $H_{j}$ contains some $A_{i}.$ Also as a
+homogeneous ideal cannot be contained in two disjoint ideals we do not face
+the above indicated problem and Zorn's Lemma gives the required maximal
+elements.
+
+\end{document}
