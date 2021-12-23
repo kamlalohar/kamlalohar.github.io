@@ -1,0 +1,26 @@
+<Asx Version = "3.0" > 
+<Param Name = "Name" Value = "Muslim TV" />
+
+<Param Name = "AllowShuffle" Value = "yes" />
+
+<Entry> 
+<Param Name = "MediaType" Value = "video" />
+
+<Param Name = "Bitrate" Value = "306439" />
+
+<Title > Muslim TV </Title>
+
+<Param Name = "WMFSDKNeeded" Value = "0.0.0.0000" />
+
+<Param Name = "WMFSDKVersion" Value = "7.01.00.3055" />
+
+<Param Name = "type" Value = "broadcast" />
+
+<Param Name = "Is_Trusted" Value = "false" />
+
+<Param Name = "Is_Protected" Value = "false" />
+
+<Ref href = "mms://live300k1.wm.muslimtv.servecast.net/MuslimTV_wmlz_live300k"/>
+<Ref href = "mms://live300k2.wm.muslimtv.servecast.net/MuslimTV_wmlz_live300k"/>
+</Entry>
+</Asx>

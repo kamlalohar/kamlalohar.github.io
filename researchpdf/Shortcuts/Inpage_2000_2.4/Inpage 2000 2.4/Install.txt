@@ -1,0 +1,11 @@
+-	simply copy the folder in your harddisk.
+-	run inpage.exe from the program folder i.e \inpage24\inpage.exe
+-	it will ask to install the driver and restart the windows
+-	after restarting run \inpage24\inpage.exe
+	enjoy
+
+
+
+FOR MORE INFO AND MORE DOWNLOAD
+VISIT:  www.tafreehmela.com
+
